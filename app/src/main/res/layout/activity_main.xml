@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ToggleButton"
+            android:textOff="绘制"
+            android:textOn="禁止绘制" />
+        <Button
+            android:id="@+id/undo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="撤销"
+            android:onClick="undo"
+            android:enabled="false"/>
+        <Button
+            android:id="@+id/redo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="重做"
+            android:onClick="redo"
+            android:enabled="false"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <Spinner
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:id="@+id/width"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:id="@+id/color"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+    </LinearLayout>
+
+
+
+    <com.vnetoo.drawboard.PhotoDrawView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ccc"
+        android:scrollbars="vertical|horizontal" />
+</LinearLayout>
